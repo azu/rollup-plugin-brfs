@@ -11,6 +11,21 @@ It supports that
 - `fs.readdirSync(pathExpr)`
 - `fs.readdir(pathExpr, cb)`
 
+## Known Problems
+
+[browserify/brfs](https://github.com/browserify/brfs) does not support ES module.
+
+
+```js
+import fs from "fs";
+const text = fs.readFileSync(__dirname + "/readme.md", "utf-8");
+console.log(text);
+```
+
+It does not inlined.
+
+If you used babel, [babel-plugin-static-fs](https://github.com/Jam3/babel-plugin-static-fs) will resolve it.
+
 ## Install
 
 Install with [npm](https://www.npmjs.com/):
