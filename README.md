@@ -1,4 +1,5 @@
-# rollup-plugin-brfs
+# rollup-plugin-brfs [![Build Status](https://travis-ci.org/azu/rollup-plugin-brfs.svg?branch=master)](https://travis-ci.org/azu/rollup-plugin-brfs)
+
 
 Rollup plugin that inliing `fs.readFile` contents.
 

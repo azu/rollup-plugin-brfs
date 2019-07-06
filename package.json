@@ -24,8 +24,8 @@
     "lib/",
     "src/"
   ],
-  "main": "lib/rollup-plugin-brfs.js",
-  "types": "lib/rollup-plugin-brfs.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "test"
