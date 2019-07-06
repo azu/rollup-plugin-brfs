@@ -1,0 +1,74 @@
+{
+  "name": "rollup-plugin-brfs",
+  "version": "1.0.0",
+  "description": "Rollup plugin that inliing fs.readFile contents.",
+  "keywords": [
+    "fs",
+    "inline",
+    "inlining",
+    "plugin",
+    "rollup"
+  ],
+  "homepage": "https://github.com/azu/rollup-plugin-brfs",
+  "bugs": {
+    "url": "https://github.com/azu/rollup-plugin-brfs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/rollup-plugin-brfs.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/rollup-plugin-brfs.js",
+  "types": "lib/rollup-plugin-brfs.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production tsc -p .",
+    "clean": "rimraf lib/",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepublish": "npm run --if-present build",
+    "test": "mocha \"test/**/*.ts\"",
+    "watch": "tsc -p . --watch"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.12",
+    "cross-env": "^5.2.0",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.0.2",
+    "mocha": "^6.1.4",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.16.6",
+    "ts-node": "^8.3.0",
+    "ts-node-test-register": "^8.0.1",
+    "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "brfs": "^2.0.2"
+  }
+}
